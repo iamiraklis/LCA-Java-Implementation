@@ -59,21 +59,4 @@ while (i<path1.size() && i < path2.size()){
 		return path1.get(i - 1);
 	}
 
-	public static void main(String[] args) {
-		LCA tree = new LCA();
-		tree.root = new Node(10);
-		tree.root.left = new Node(5);
-		tree.root.right = new Node(19);
-		tree.root.left.left = new Node(1);
-		tree.root.left.right = new Node(6);
-		tree.root.right.left = new Node(17);
-		tree.root.right.right = new Node(21);
-
-		System.out.println("LCA(1, 6): " + tree.findLCA(tree.root, 1, 6));
-		System.out.println("LCA(17, 21): " + tree.findLCA(tree.root, 17, 21));
-		System.out.println("LCA(1, 21): " + tree.findLCA(tree.root, 1, 21));
-		System.out.println("LCA(17, 19): " + tree.findLCA(tree.root, 17, 19));
-		System.out.println("LCA(4, 19), where 4 is not a node in the tree: " + tree.findLCA(tree.root, 4, 19));
-
-	}
 }
